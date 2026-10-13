@@ -296,3 +296,27 @@ footer {
         font-size: 2rem;
     }
 }
+
+
+
+}
+
+/* Adaptation mobile */
+@media (max-width: 800px) {
+
+    .hero {
+        padding-right: 0;
+    }
+
+    .hero-photo {
+        position: static;
+        transform: none;
+        margin-top: 40px;
+    }
+
+    .hero-photo img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
