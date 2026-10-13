@@ -300,8 +300,31 @@ footer {
 
 
 }
+/* =========================
+   PHOTO ACCUEIL
+========================= */
 
-/* Adaptation mobile */
+.hero {
+    position: relative;
+    padding-right: 280px;
+}
+
+.hero-photo {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-photo img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Mobile */
 @media (max-width: 800px) {
 
     .hero {
@@ -311,12 +334,11 @@ footer {
     .hero-photo {
         position: static;
         transform: none;
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
     .hero-photo img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
+        width: 160px;
+        height: 200px;
     }
 }
