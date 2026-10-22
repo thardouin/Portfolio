@@ -47,6 +47,13 @@
                 d’allocation des effectifs médicaux.
             </p>
 
+            <p class="project-disclaimer">
+                <strong>
+                    Ce projet repose exclusivement sur des données fictives
+                    utilisées dans le cadre d’un business case.
+                </strong>
+            </p>
+
         </section>
 
 
@@ -65,10 +72,11 @@
 
             <p>
                 L’analyse couvre les années 2022 et 2023 et repose sur
-                100 000 interventions concernant plus de 60 000 patients.
+                100 000 interventions concernant 60 176 patients.
                 Les données d’activité ont été croisées avec les effectifs
-                médicaux afin de construire des indicateurs de pilotage
-                et d’identifier les principaux déséquilibres du réseau.
+                médicaux afin de construire des indicateurs de pilotage,
+                d’identifier les principaux déséquilibres du réseau et
+                d’explorer différents scénarios d’allocation des ressources.
             </p>
 
         </section>
@@ -84,7 +92,7 @@
             <p>
                 Une phase de préparation a permis de structurer les données
                 nécessaires à l’analyse et de traiter plusieurs problématiques
-                de qualité.
+                de qualité avant leur exploitation dans Power BI.
             </p>
 
             <div class="dashboard-features">
@@ -97,10 +105,11 @@
             </div>
 
             <p style="margin-top: 30px;">
-                Les durées de séjour négatives ou supérieures à 30 jours
-                ont notamment été exclues des analyses de durée, tout en
-                conservant les interventions concernées dans les analyses
-                de volume.
+                Onze durées de séjour négatives ou supérieures à 30 jours
+                ont été identifiées et exclues des analyses de durée.
+                Les interventions concernées restent néanmoins comptabilisées
+                dans les analyses de volume afin de ne pas modifier
+                artificiellement l’activité observée.
             </p>
 
         </section>
@@ -118,6 +127,12 @@
                 les interventions et les effectifs médicaux.
                 Elles partagent plusieurs dimensions permettant d’analyser
                 l’activité par hôpital, service, patient et période.
+            </p>
+
+            <p>
+                Cette organisation évite notamment de dupliquer les effectifs
+                médicaux sur chaque intervention et permet de conserver
+                deux niveaux d’analyse distincts au sein d’un même modèle.
             </p>
 
             <div class="project-kpis">
@@ -152,14 +167,26 @@
 
             <p class="section-label">ANALYSE 2023</p>
 
-            <h2>Une activité globalement stable mais des écarts importants</h2>
+            <h2>
+                Une activité stable à l’échelle du réseau,
+                mais des écarts importants entre établissements
+            </h2>
 
             <p>
-                L’analyse 2023 met en évidence une activité légèrement
-                inférieure à celle de 2022, mais surtout des différences
-                importantes entre établissements dans la charge supportée
-                par les équipes médicales.
+                L’analyse 2023 fait apparaître une activité légèrement
+                inférieure à celle de 2022. Le réseau enregistre
+                49 665 interventions et 38 084 patients distincts,
+                soit une diminution d’environ 1,3 % pour chacun
+                de ces deux indicateurs.
             </p>
+
+            <p>
+                Cette évolution reste toutefois modérée à l’échelle du réseau.
+                L’analyse détaillée met surtout en évidence des différences
+                importantes de charge entre établissements, ainsi qu’une
+                saisonnalité de l’activité.
+            </p>
+
 
             <div class="project-kpis">
 
@@ -170,7 +197,7 @@
 
                 <div>
                     <strong>38 084</strong>
-                    <span>Patients</span>
+                    <span>Patients distincts</span>
                 </div>
 
                 <div>
@@ -204,12 +231,93 @@
 
                 <figcaption>
                     <strong>Analyse de l’activité 2023</strong>
-                    Vue synthétique de l’activité permettant de suivre
-                    les volumes, les patients, les effectifs médicaux
-                    et les différences entre établissements.
+                    Vue synthétique de l’activité du réseau et comparaison
+                    des principaux indicateurs entre établissements.
                 </figcaption>
 
             </figure>
+
+
+            <!-- Analyse détaillée -->
+            <div class="project-analysis">
+
+                <h3>Une saisonnalité qui se confirme</h3>
+
+                <p>
+                    L’activité mensuelle présente un profil proche de celui
+                    observé en 2022 : des niveaux plus élevés en mai et juillet,
+                    un creux en septembre puis une remontée en fin d’année.
+                </p>
+
+                <p>
+                    Cette saisonnalité constitue un élément important pour
+                    le pilotage des ressources. Une analyse fondée uniquement
+                    sur les volumes annuels pourrait masquer des périodes
+                    de tension ponctuelles et conduire à une allocation
+                    des effectifs insuffisamment adaptée aux variations
+                    mensuelles de l’activité.
+                </p>
+
+
+                <h3>Marseille concentre la principale tension sur les effectifs</h3>
+
+                <p>
+                    Avec 596 interventions par médecin, Marseille présente
+                    un niveau d’activité rapporté aux effectifs très supérieur
+                    aux autres établissements, qui se situent entre
+                    279 et 298 interventions par médecin.
+                </p>
+
+                <p>
+                    Cet écart ne permet pas à lui seul de conclure à une
+                    surcharge des équipes, mais il constitue un signal
+                    nécessitant une analyse plus fine par spécialité.
+                    L’oncologie à Marseille apparaît notamment comme
+                    l’un des principaux points de tension et justifie
+                    d’étudier plus précisément la répartition des ressources
+                    médicales au sein du réseau.
+                </p>
+
+
+                <h3>Des déséquilibres qui diffèrent selon les spécialités</h3>
+
+                <p>
+                    L’analyse détaillée montre que les écarts ne concernent
+                    pas uniquement Marseille et ne sont pas homogènes selon
+                    les services. Certaines combinaisons hôpital-spécialité
+                    présentent des niveaux d’activité par médecin
+                    particulièrement élevés.
+                </p>
+
+                <p>
+                    Cette observation conduit à privilégier une analyse locale
+                    par établissement et spécialité plutôt qu’une comparaison
+                    uniquement fondée sur les effectifs globaux des hôpitaux.
+                    Elle constitue le point de départ de l’analyse d’allocation
+                    des ressources présentée dans la suite du projet.
+                </p>
+
+
+                <h3>Lyon présente un profil différent sur la durée des séjours</h3>
+
+                <p>
+                    Un second signal ressort de l’analyse : la durée moyenne
+                    de séjour atteint 5,28 jours sur le réseau, mais s’élève
+                    à 6,98 jours à Lyon contre environ 5 jours dans les autres
+                    établissements.
+                </p>
+
+                <p>
+                    Cet écart, proche de deux jours, justifie une analyse
+                    spécifique des séjours lyonnais. Il ne permet cependant
+                    pas de conclure directement à une moindre efficacité :
+                    les différences peuvent notamment provenir des
+                    caractéristiques des patients, des parcours de soins,
+                    de l’organisation des sorties ou de la qualité
+                    des données disponibles.
+                </p>
+
+            </div>
 
         </section>
 
@@ -219,19 +327,22 @@
 
             <p class="section-label">ALLOCATION DES RESSOURCES</p>
 
-            <h2>Identifier les déséquilibres entre établissements</h2>
+            <h2>Passer du constat à un scénario d’allocation</h2>
 
             <p>
-                Le croisement entre activité et effectifs permet d’identifier
-                les établissements et spécialités présentant les niveaux
-                d’activité par médecin les plus élevés.
+                Afin d’approfondir les écarts observés, l’activité a été
+                analysée au niveau de chaque combinaison hôpital-spécialité.
+                Cette granularité permet d’identifier les situations où
+                l’activité rapportée aux effectifs s’éloigne fortement
+                de celle observée dans le reste du réseau.
             </p>
 
             <p>
-                Marseille se distingue notamment par un nombre
-                d’interventions par médecin nettement supérieur aux autres
-                établissements. L’oncologie constitue un exemple particulièrement
-                marqué de ce déséquilibre.
+                L’oncologie à Marseille constitue le cas le plus marqué :
+                ce service concentre 50 % de l’activité d’oncologie du réseau
+                avec seulement 14 % des médecins de la spécialité.
+                Il dépasse également chaque mois la cible utilisée dans
+                le scénario d’analyse.
             </p>
 
 
@@ -260,6 +371,35 @@
 
             </figure>
 
+
+            <div class="project-analysis">
+
+                <h3>Construire un scénario plutôt qu’une décision de staffing</h3>
+
+                <p>
+                    Une cible hypothétique d’une intervention par médecin
+                    et par jour calendaire a été utilisée pour transformer
+                    le diagnostic en scénario quantifiable.
+                </p>
+
+                <p>
+                    Pour l’oncologie à Marseille, le scénario conduit
+                    à étudier la réaffectation de quatre médecins depuis Paris,
+                    un depuis Nantes et un depuis Lyon, complétée par
+                    le recrutement théorique d’un médecin.
+                </p>
+
+                <p>
+                    Cette logique a ensuite été appliquée aux autres spécialités
+                    afin d’identifier les possibilités théoriques de mobilité
+                    interne avant d’estimer les besoins de recrutement.
+                    Ces résultats constituent des hypothèses d’aide à la décision
+                    et doivent être confrontés aux contraintes opérationnelles
+                    et médicales.
+                </p>
+
+            </div>
+
         </section>
 
 
@@ -272,15 +412,14 @@
 
             <p>
                 La durée moyenne de séjour atteint 5,28 jours sur le réseau.
-                Lyon se distingue avec une durée moyenne proche de 7 jours,
-                contre environ 5 jours dans les autres établissements.
+                Lyon se distingue avec 6,98 jours, tandis que les cinq autres
+                établissements se situent entre 4,96 et 5,01 jours.
             </p>
 
             <p>
-                L’écart persiste lors des comparaisons par service,
-                diagnostic et tranche d’âge. L’absence de séjours inférieurs
-                à cinq jours à Lyon constitue également un point d’attention
-                nécessitant une investigation complémentaire.
+                Les séjours y sont donc en moyenne proches de deux jours
+                plus longs, soit environ 40 % de plus que dans les autres
+                établissements.
             </p>
 
 
@@ -309,6 +448,39 @@
 
             </figure>
 
+
+            <div class="project-analysis">
+
+                <h3>Un écart qui persiste dans les analyses détaillées</h3>
+
+                <p>
+                    L’écart observé à Lyon persiste lorsque les données sont
+                    comparées séparément par service, diagnostic et tranche
+                    d’âge. Cette régularité suggère que la différence ne
+                    provient pas uniquement de la composition globale
+                    de l’activité de l’établissement.
+                </p>
+
+
+                <h3>L’absence de séjours courts constitue un signal à investiguer</h3>
+
+                <p>
+                    Aucun séjour inférieur à cinq jours n’apparaît à Lyon,
+                    alors que les durées sont réparties presque uniformément
+                    entre 0 et 10 jours dans les autres établissements.
+                </p>
+
+                <p>
+                    Avant toute interprétation métier, la priorité est donc
+                    de vérifier l’exhaustivité des séjours courts, les dates
+                    enregistrées et les règles de saisie. Une fois la qualité
+                    des données confirmée, l’analyse pourrait être approfondie
+                    avec les équipes médicales afin d’étudier les parcours
+                    patients et l’organisation des sorties.
+                </p>
+
+            </div>
+
         </section>
 
 
@@ -320,10 +492,10 @@
             <h2>Transformer le diagnostic en pistes d’action</h2>
 
             <p>
-                L’analyse permet de construire plusieurs scénarios
-                d’optimisation des ressources, à considérer comme des
-                hypothèses de travail devant être validées avec les équipes
-                médicales et opérationnelles.
+                Les analyses permettent de structurer plusieurs pistes
+                d’action. Elles doivent être considérées comme des scénarios
+                à valider avec les équipes médicales et opérationnelles,
+                et non comme des décisions directement applicables.
             </p>
 
             <div class="project-kpis">
@@ -339,16 +511,16 @@
                 <div>
                     <strong>Recruter</strong>
                     <span>
-                        Identifier les spécialités nécessitant potentiellement
-                        des effectifs supplémentaires
+                        Compléter les réaffectations par des recrutements
+                        dans les spécialités présentant un besoin résiduel
                     </span>
                 </div>
 
                 <div>
                     <strong>Investiguer Lyon</strong>
                     <span>
-                        Vérifier l’exhaustivité des séjours courts et les règles
-                        d’enregistrement
+                        Vérifier l’exhaustivité des séjours courts,
+                        les dates et les règles d’enregistrement
                     </span>
                 </div>
 
@@ -374,16 +546,24 @@
 
             <p>
                 Les scénarios d’effectifs reposent sur une cible hypothétique
-                d’une intervention par médecin et par jour calendaire et sur
-                des effectifs supposés constants.
+                d’une intervention par médecin et par jour calendaire,
+                sur une activité supposée constante et sur des effectifs
+                de référence supposés constants sur la période.
             </p>
 
             <p>
                 Ils constituent donc un outil d’aide à la décision et non
                 une recommandation de staffing directement applicable.
+                La faisabilité des réaffectations dépend notamment de la
+                mobilité, des compétences disponibles, des effectifs minimums
+                nécessaires et de la saisonnalité de l’activité.
+            </p>
+
+            <p>
                 Une analyse opérationnelle complémentaire devrait intégrer
-                notamment les ETP, la présence réelle, la complexité des soins,
-                les capacités en lits et l’organisation des sorties.
+                les ETP, la présence effective, le temps nécessaire par
+                intervention, la complexité des soins, les capacités en lits,
+                les délais, les réadmissions et l’organisation des sorties.
             </p>
 
         </section>
