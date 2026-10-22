@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analyse de l'activité hospitalière | Thomas Hardouin</title>
+
+    <meta name="description"
+          content="Projet Power BI d'analyse de l'activité hospitalière et d'allocation des ressources réalisé par Thomas Hardouin.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Thomas Hardouin</a>
+
+            <div class="nav-links">
+                <a href="index.html#projets">← Retour aux projets</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="project-page">
+
+        <!-- Présentation -->
+        <section class="project-hero">
+
+            <p class="section-label">
+                POWER BI · DAX · DATA MODELING · BUSINESS ANALYTICS
+            </p>
+
+            <h1>
+                Analyse de l’activité hospitalière et allocation des ressources
+            </h1>
+
+            <p class="project-intro">
+                Analyse de l’activité d’un réseau hospitalier afin
+                d’identifier les déséquilibres de charge, d’étudier
+                les durées de séjour et de construire des scénarios
+                d’allocation des effectifs médicaux.
+            </p>
+
+        </section>
+
+
+        <!-- Contexte -->
+        <section class="project-section">
+
+            <p class="section-label">CONTEXTE</p>
+
+            <h2>Transformer les données hospitalières en leviers de pilotage</h2>
+
+            <p>
+                L’objectif du projet était d’analyser l’activité d’un réseau
+                de six hôpitaux afin de comprendre les différences de charge
+                entre établissements et spécialités.
+            </p>
+
+            <p>
+                L’analyse couvre les années 2022 et 2023 et repose sur
+                100 000 interventions concernant plus de 60 000 patients.
+                Les données d’activité ont été croisées avec les effectifs
+                médicaux afin de construire des indicateurs de pilotage
+                et d’identifier les principaux déséquilibres du réseau.
+            </p>
+
+        </section>
+
+
+        <!-- Préparation des données -->
+        <section class="project-section">
+
+            <p class="section-label">PRÉPARATION DES DONNÉES</p>
+
+            <h2>Fiabiliser les données avant l’analyse</h2>
+
+            <p>
+                Une phase de préparation a permis de structurer les données
+                nécessaires à l’analyse et de traiter plusieurs problématiques
+                de qualité.
+            </p>
+
+            <div class="dashboard-features">
+                <span>Nettoyage des dates</span>
+                <span>Calcul des durées de séjour</span>
+                <span>Harmonisation des services</span>
+                <span>Harmonisation des diagnostics</span>
+                <span>Création des tranches d’âge</span>
+                <span>Dépivotage des effectifs</span>
+            </div>
+
+            <p style="margin-top: 30px;">
+                Les durées de séjour négatives ou supérieures à 30 jours
+                ont notamment été exclues des analyses de durée, tout en
+                conservant les interventions concernées dans les analyses
+                de volume.
+            </p>
+
+        </section>
+
+
+        <!-- Modélisation -->
+        <section class="project-section">
+
+            <p class="section-label">DATA MODELING</p>
+
+            <h2>Construire un modèle adapté à l’analyse</h2>
+
+            <p>
+                Le modèle Power BI repose sur deux tables de faits :
+                les interventions et les effectifs médicaux.
+                Elles partagent plusieurs dimensions permettant d’analyser
+                l’activité par hôpital, service, patient et période.
+            </p>
+
+            <div class="project-kpis">
+
+                <div>
+                    <strong>Interventions</strong>
+                    <span>Table de faits de l’activité hospitalière</span>
+                </div>
+
+                <div>
+                    <strong>Effectifs</strong>
+                    <span>Médecins par hôpital et spécialité</span>
+                </div>
+
+                <div>
+                    <strong>Dimensions</strong>
+                    <span>Hôpital, service, date et patient</span>
+                </div>
+
+                <div>
+                    <strong>Mesures DAX</strong>
+                    <span>Indicateurs et scénarios dynamiques</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Analyse 2023 -->
+        <section class="project-section">
+
+            <p class="section-label">ANALYSE 2023</p>
+
+            <h2>Une activité globalement stable mais des écarts importants</h2>
+
+            <p>
+                L’analyse 2023 met en évidence une activité légèrement
+                inférieure à celle de 2022, mais surtout des différences
+                importantes entre établissements dans la charge supportée
+                par les équipes médicales.
+            </p>
+
+            <div class="project-kpis">
+
+                <div>
+                    <strong>49 665</strong>
+                    <span>Interventions en 2023</span>
+                </div>
+
+                <div>
+                    <strong>38 084</strong>
+                    <span>Patients</span>
+                </div>
+
+                <div>
+                    <strong>147</strong>
+                    <span>Médecins de référence</span>
+                </div>
+
+                <div>
+                    <strong>338</strong>
+                    <span>Interventions par médecin</span>
+                </div>
+
+            </div>
+
+
+            <!-- Capture Analyse 2023 -->
+            <figure class="dashboard-showcase">
+
+                <a href="health4you-overview.png"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="dashboard-image-link">
+
+                    <img
+                        src="health4you-overview.png"
+                        alt="Dashboard Power BI - Analyse de l'activité hospitalière 2023"
+                        class="dashboard-image"
+                    >
+
+                </a>
+
+                <figcaption>
+                    <strong>Analyse de l’activité 2023</strong>
+                    Vue synthétique de l’activité permettant de suivre
+                    les volumes, les patients, les effectifs médicaux
+                    et les différences entre établissements.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- Allocation des ressources -->
+        <section class="project-section">
+
+            <p class="section-label">ALLOCATION DES RESSOURCES</p>
+
+            <h2>Identifier les déséquilibres entre établissements</h2>
+
+            <p>
+                Le croisement entre activité et effectifs permet d’identifier
+                les établissements et spécialités présentant les niveaux
+                d’activité par médecin les plus élevés.
+            </p>
+
+            <p>
+                Marseille se distingue notamment par un nombre
+                d’interventions par médecin nettement supérieur aux autres
+                établissements. L’oncologie constitue un exemple particulièrement
+                marqué de ce déséquilibre.
+            </p>
+
+
+            <!-- Capture Allocation ressources -->
+            <figure class="dashboard-showcase">
+
+                <a href="health4you-resources.png"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="dashboard-image-link">
+
+                    <img
+                        src="health4you-resources.png"
+                        alt="Dashboard Power BI - Allocation des ressources médicales"
+                        class="dashboard-image"
+                    >
+
+                </a>
+
+                <figcaption>
+                    <strong>Affectation des ressources</strong>
+                    Analyse des interventions par médecin et construction
+                    de scénarios permettant d’identifier les besoins
+                    théoriques de réaffectation ou de recrutement.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- Durée des séjours -->
+        <section class="project-section">
+
+            <p class="section-label">DURÉE DES SÉJOURS</p>
+
+            <h2>Lyon se distingue par des séjours nettement plus longs</h2>
+
+            <p>
+                La durée moyenne de séjour atteint 5,28 jours sur le réseau.
+                Lyon se distingue avec une durée moyenne proche de 7 jours,
+                contre environ 5 jours dans les autres établissements.
+            </p>
+
+            <p>
+                L’écart persiste lors des comparaisons par service,
+                diagnostic et tranche d’âge. L’absence de séjours inférieurs
+                à cinq jours à Lyon constitue également un point d’attention
+                nécessitant une investigation complémentaire.
+            </p>
+
+
+            <!-- Capture Durées de séjour -->
+            <figure class="dashboard-showcase">
+
+                <a href="health4you-length-of-stay.png"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="dashboard-image-link">
+
+                    <img
+                        src="health4you-length-of-stay.png"
+                        alt="Analyse Power BI des durées de séjour par hôpital"
+                        class="dashboard-image"
+                    >
+
+                </a>
+
+                <figcaption>
+                    <strong>Analyse des durées de séjour</strong>
+                    Comparaison des établissements et identification
+                    d’un profil atypique à Lyon nécessitant de contrôler
+                    la qualité des données et les parcours patients.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- Recommandations -->
+        <section class="project-section">
+
+            <p class="section-label">RECOMMANDATIONS</p>
+
+            <h2>Transformer le diagnostic en pistes d’action</h2>
+
+            <p>
+                L’analyse permet de construire plusieurs scénarios
+                d’optimisation des ressources, à considérer comme des
+                hypothèses de travail devant être validées avec les équipes
+                médicales et opérationnelles.
+            </p>
+
+            <div class="project-kpis">
+
+                <div>
+                    <strong>Réaffecter</strong>
+                    <span>
+                        Étudier les possibilités de mobilité entre établissements
+                        au sein d’une même spécialité
+                    </span>
+                </div>
+
+                <div>
+                    <strong>Recruter</strong>
+                    <span>
+                        Identifier les spécialités nécessitant potentiellement
+                        des effectifs supplémentaires
+                    </span>
+                </div>
+
+                <div>
+                    <strong>Investiguer Lyon</strong>
+                    <span>
+                        Vérifier l’exhaustivité des séjours courts et les règles
+                        d’enregistrement
+                    </span>
+                </div>
+
+                <div>
+                    <strong>Fiabiliser la capacité</strong>
+                    <span>
+                        Intégrer le temps de travail, la présence effective
+                        et la complexité des soins
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Limites -->
+        <section class="project-section">
+
+            <p class="section-label">LIMITES DE L’ANALYSE</p>
+
+            <h2>Des scénarios à valider avec le métier</h2>
+
+            <p>
+                Les scénarios d’effectifs reposent sur une cible hypothétique
+                d’une intervention par médecin et par jour calendaire et sur
+                des effectifs supposés constants.
+            </p>
+
+            <p>
+                Ils constituent donc un outil d’aide à la décision et non
+                une recommandation de staffing directement applicable.
+                Une analyse opérationnelle complémentaire devrait intégrer
+                notamment les ETP, la présence réelle, la complexité des soins,
+                les capacités en lits et l’organisation des sorties.
+            </p>
+
+        </section>
+
+
+        <!-- Compétences -->
+        <section class="project-section">
+
+            <p class="section-label">COMPÉTENCES MOBILISÉES</p>
+
+            <h2>De la donnée à la recommandation</h2>
+
+            <div class="skills">
+                <span>Power BI</span>
+                <span>Power Query</span>
+                <span>DAX</span>
+                <span>Data Cleaning</span>
+                <span>Data Modeling</span>
+                <span>Data Visualisation</span>
+                <span>Business Analysis</span>
+                <span>Data Quality</span>
+            </div>
+
+        </section>
+
+
+        <!-- Retour -->
+        <section class="project-back">
+
+            <a href="index.html#projets" class="button secondary">
+                ← Retour aux projets
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Thomas Hardouin — Data Analyst</p>
+    </footer>
+
+</body>
+
+</html>
